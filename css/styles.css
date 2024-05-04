@@ -1,0 +1,122 @@
+/* Global styles */
+body {
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+  background-color: #b8b0b0;
+}
+
+/* Header styles */
+header {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #7c7575;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  overflow: hidden; /* Clear the float */
+}
+.logo {
+  float: left;
+  margin-right: 20px;
+}
+
+.site-info {
+  overflow: hidden; /* Clear the float */
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+/* Featured Gems section styles */
+.featured-gems {
+  display: flex; /* Use flexbox */
+  flex-wrap: wrap; /* Allow wrapping to next line */
+  justify-content: space-between; /* Distribute items evenly */
+  margin: 20px;
+}
+
+/* Gem section styles */
+.gem, .gem-info, .review-card {
+  flex: 1; /* Distribute space evenly among gems */
+  padding: 20px;
+  background-color: #dfd3d3;
+  border-radius: 5px;
+  margin: 10px;
+  transition: transform 0.3s, box-shadow 0.3s; /* Add transitions for smooth effect */
+}
+
+.gem:hover, .gem-info:hover, .review-card:hover {
+  transform: translateY(-5px); /* Apply a lift effect on hover */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Add-review section styles */
+.add-review {
+  text-align: left;
+  float: none; /* Clear the float */
+}
+
+/* Footer styles */
+footer {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+button {
+  padding: 10px 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #333;
+}
+
+.site-info {
+  overflow: hidden; /* Clear the float */
+}
+
+/* Media Query for screens less than or equal to 400px wide */
+@media (max-width: 400px) {
+  /* Header styles */
+  header {
+    padding: 5px;
+  }
+  .logo img, .gem img {
+    width: 100%;
+    height: auto;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  /* Featured Gems section styles */
+  .featured-gems {
+    margin: 10px;
+  }
+
+  /* Gem section styles */
+  .gem, .gem-info {
+    flex-basis: calc(50% - 20px);
+    margin: 5px;
+  }
+
+  /* Add-review section styles */
+  .add-review {
+    margin-top: 20px;
+  }
+
+  /* Footer styles */
+  footer {
+    padding: 10px;
+  }
+}
